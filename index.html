@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이가현 | 포트폴리오</title>
+    <style>
+        body { font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; line-height: 1.7; max-width: 840px; margin: 50px auto; padding: 0 24px; color: #222; background-color: #fafafa; }
+        .container { background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+        header { border-bottom: 2px solid #0056b3; padding-bottom: 24px; margin-bottom: 32px; }
+        h1 { margin: 0 0 8px 0; color: #0056b3; font-size: 28px; }
+        .subtitle { color: #555; font-size: 16px; margin-bottom: 16px; }
+        .intro { background: #f0f4f8; padding: 16px 20px; border-radius: 8px; margin: 16px 0; font-size: 15px; }
+        .info-list { list-style: none; padding: 0; margin: 16px 0; font-size: 15px; }
+        .info-list li { margin-bottom: 6px; }
+        h2 { color: #111; font-size: 22px; margin-bottom: 16px; border-left: 4px solid #0056b3; padding-left: 12px; }
+        .project-card { background: #f8f9fa; padding: 26px; border-radius: 8px; border: 1px solid #e9ecef; }
+        .project-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 12px; }
+        .project-header h3 { margin: 0; font-size: 19px; color: #0056b3; }
+        .project-meta { font-size: 14px; color: #666; font-weight: bold; }
+        .detail-list { padding-left: 20px; margin: 16px 0; }
+        .detail-list li { margin-bottom: 14px; }
+        .sub-list { margin-top: 6px; padding-left: 18px; color: #444; font-size: 14.5px; }
+        .sub-list li { margin-bottom: 6px; }
+        .tag-group { margin: 14px 0; }
+        .tag { display: inline-block; background: #e7f1ff; color: #0056b3; padding: 4px 10px; border-radius: 15px; font-size: 13px; font-weight: bold; margin-right: 6px; margin-bottom: 6px; }
+        .btn-group { margin-top: 22px; }
+        .btn { display: inline-block; padding: 9px 16px; background: #0056b3; color: #fff; text-decoration: none; border-radius: 6px; margin-right: 10px; font-size: 14px; font-weight: bold; }
+        .btn:hover { background: #004494; }
+        .btn-outline { background: #fff; color: #0056b3; border: 1px solid #0056b3; }
+        .btn-outline:hover { background: #f0f4f8; }
+        code { background: #eef2f6; padding: 2px 5px; border-radius: 4px; font-size: 13.5px; color: #d63384; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>이가현 (Gahyun Lee)</h1>
+        <div class="subtitle">부산대학교 정보컴퓨터공학부 (AI 전공) 학부생</div>
+        
+        <div class="intro">
+            현재 부산대학교 정보컴퓨터공학부에서 인공지능(AI)을 전공하고 있는 학부생입니다. AI Agent, 앱·웹 개발, UI 디자인 분야에 깊은 관심을 가지고 학습하고 있으며, 이를 바탕으로 일상의 문제를 해결하는 실용적인 프로젝트를 구현하는 것을 목표로 하고 있습니다.
+        </div>
+
+        <ul class="info-list">
+            <li><strong>관심 분야:</strong> AI Agent, LLM 경량화, 앱/웹 개발, UI 디자인</li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/gahyn" target="_blank">https://github.com/gahyn</a></li>
+            <li><strong>이메일:</strong> gahyunlee@pusan.ac.kr</li>
+        </ul>
+
+        <div class="btn-group">
+            <a href="resume.pdf" download="이가현_이력서.pdf" class="btn">이력서 PDF 다운로드</a>
+        </div>
+    </header>
+
+    <section>
+        <h2>대표 프로젝트</h2>
+        <div class="project-card">
+            <div class="project-header">
+                <h3>EXAONE-4.0-1.2B 기반 LLM FP8 양자화 및 경량화 최적화</h3>
+                <span class="project-meta">LG Aimers 8기 해커톤 | 팀 프로젝트 (조장) | 2026.02</span>
+            </div>
+
+            <div class="tag-group">
+                <span class="tag">Python</span>
+                <span class="tag">PyTorch</span>
+                <span class="tag">Hugging Face</span>
+                <span class="tag">llmcompressor</span>
+                <span class="tag">FP8 Quantization</span>
+                <span class="tag">vLLM</span>
+            </div>
+
+            <ul class="detail-list">
+                <li>
+                    <strong>문제 정의:</strong> On-Device 및 제한된 GPU 환경에서 대규모 언어 모델(LLM)을 구동할 때 발생하는 메모리 점유율과 응답 지연(Latency) 문제를 해결하고자 했습니다. 전체 레이어에 일괄 양자화를 적용할 경우 발생하는 급격한 추론 정확도 하락을 방지하면서, 모델 크기와 추론 속도, 성능 간의 최적 균형점을 도출하는 것을 목표로 설정했습니다.
+                </li>
+                <li>
+                    <strong>역할 (팀 조장) 및 핵심 구현:</strong> 팀 리더로서 전체 실험 로드맵 수립, 팀원 간 역할 분담 및 실험 결과 통합 조율을 총괄했으며, 핵심 양자화 파이프라인을 직접 설계·구현했습니다.
+                    <ul class="sub-list">
+                        <li><strong>FP8 One-shot PTQ 및 핵심 레이어 보호 전략:</strong> <code>llmcompressor</code>를 활용해 <code>Linear</code> 레이어에 FP8 양자화를 적용하되, 성능에 민감한 입출력층(<code>embed_tokens</code>, <code>lm_head</code>)과 초기·후반부 트랜스포머 블록 4개(<code>layers.0, 1, 22, 23</code>)를 양자화에서 제외(<code>ignore</code>)하여 정확도 저하를 방어했습니다.</li>
+                        <li><strong>평가 환경 맞춤형 캘리브레이션(Calibration):</strong> <code>LGAI-EXAONE/MANTA-1M</code> 데이터셋에서 구간별 균등 샘플링으로 128개 데이터를 추출하고, 실제 vLLM 평가 파이프라인과 동일하게 <code>add_generation_prompt=True</code> 챗 템플릿을 적용해 양자화 분포 왜곡을 최소화했습니다.</li>
+                        <li><strong>메모리 및 서빙 포맷 최적화:</strong> 대용량 데이터셋 처리 시 가비지 컬렉션(<code>gc.collect()</code>)으로 메모리 누수를 방지하고, vLLM 추론 호환성을 위해 <code>safetensors</code> 표준 포맷으로 가중치를 직렬화했습니다.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>결과 및 배운 점:</strong> 레이어별 민감도 분석과 평가 환경 맞춤형 전처리를 결합하여, 제한된 하드웨어 자원(NVIDIA L4 GPU, 추론 시간 20분 이내) 조건에서 안정적인 추론 속도와 벤치마크 성능을 동시에 확보한 경량화 모델을 최종 제출했습니다. 이 과정을 통해 이론적 압축 기법을 실제 추론 엔진(vLLM) 환경에 맞게 최적화하는 실전 엔지니어링 역량을 길렀습니다.
+                </li>
+            </ul>
+
+            <div class="btn-group">
+                <a href="https://dacon.io/competitions/official/236673/overview/description" class="btn" target="_blank">대회 개요 (데모 대체)</a>
+                <a href="https://github.com/gahyn" class="btn btn-outline" target="_blank">소스 코드 (GitHub)</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
